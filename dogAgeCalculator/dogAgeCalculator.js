@@ -14,7 +14,7 @@ const dogName = process.argv[2];
 // Convert the dog's age to a number
 const dogAge = Number(process.argv[3]);
 
-// Check if the dog's name and age are provided and valid
+// Check if the dog's name and age are provided and valid (checks for missing name, missing age, non-numeric age, negative age, and non-integer age)
 if (!dogName || !process.argv[3]) {
 console.log("Please enter a dog's name and age.");
 } else if (isNaN(dogAge)) {
