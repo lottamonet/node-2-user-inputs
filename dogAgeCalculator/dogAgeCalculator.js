@@ -8,10 +8,13 @@ Run this file with the node command:
 node dogAgeCalculator.js
 
 */
-
+// Get the dog's name and age from the command line arguments
 const dogName = process.argv[2];
+
+// Convert the dog's age to a number
 const dogAge = Number(process.argv[3]);
 
+// Check if the dog's name and age are provided and valid
 if (!dogName || !process.argv[3]) {
 console.log("Please enter a dog's name and age.");
 } else if (isNaN(dogAge)) {
@@ -23,6 +26,7 @@ console.log("Please enter a whole number for the dog's age.");
 } else {
 let dogYears;
 
+// Calculate the dog's age in dog years based on the given rules
 if (dogAge === 1) {
 dogYears = 15;
 } else if (dogAge === 2) {
@@ -31,5 +35,6 @@ dogYears = 24;
 dogYears = 24 + (dogAge - 2) * 5;
 }
 
+// Output the result to the console
 console.log(`Your dog, ${dogName}, is ${dogAge} years old, but that's ${dogYears} years old in dog years!`);
 }
